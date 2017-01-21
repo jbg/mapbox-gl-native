@@ -30,9 +30,8 @@ macro(mbgl_platform_core)
             PRIVATE platform/linux/src/headless_display_egl.cpp
         )
         target_link_libraries(mbgl-core
-            PUBLIC -lGLESv2
             PUBLIC -lEGL
-            PUBLIC -lgbm
+            PUBLIC -lGL
         )
     else()
         target_sources(mbgl-core

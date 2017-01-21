@@ -19,10 +19,6 @@ if(WITH_OSMESA AND WITH_EGL)
     message(FATAL_ERROR "WITH_OSMESA and WITH_EGL are mutually exclusive.")
 endif()
 
-if(WITH_EGL)
-    add_definitions(-DMBGL_USE_GLES2=1)
-endif()
-
 if(IS_CI_BUILD)
     add_compile_options(-DCI_BUILD=1)
 endif()
